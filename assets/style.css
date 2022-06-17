@@ -1,0 +1,286 @@
+
+/* Fonts */
+
+@import url('https://fonts.googleapis.com/css?family=Lora&display=swap');
+
+* {
+  font-family: 'Lora';
+}
+
+.title-slide {
+  background-color: #006666	;
+}
+
+
+.title-slide h1 {
+  color: whitesmoke;
+}
+
+.title-slide a {
+  color: #ffcc66;
+
+}
+
+.title-slide h2, .title-slide h3{
+  color: whitesmoke;
+  font-size:30px;
+}
+
+.title-slide .remark-slide-number {
+  display: none;
+}
+
+a{
+  color: #ffcc66;
+  
+}
+
+p,h1,h2,h3,h4 {
+  font-size: 30px;
+  color:whitesmoke;
+  background-color: #006666	;
+}
+
+.inverse p{
+  font-size: 80px;
+  color:whitesmoke;
+  background-color: #006666	;
+}
+
+.rec p{
+  font-size: 50px;
+  color:whitesmoke;
+  background-color: #006666	;
+}
+
+.font75{
+  font-size:75px;
+}
+
+.font50{
+  font-size:50px;
+}
+
+.font20{
+  font-size:20px;
+}
+
+.font15{
+  font-size:15px;
+}
+
+.remark-slide-content {
+    background-color: #006666	;
+}
+
+blockquote {
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+  font-size:30px;
+}
+
+
+td{
+  font-size:32px;
+  padding:5px;
+  text-align:center;
+}
+
+th, td{padding: 5px;
+  font-size:32px;
+}
+
+thead, tfoot, tr:nth-child(even) { background: #eee }
+
+
+div.my-header {
+    background-color: #b0a160;
+    color: #434e52;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 30px;
+    width: 100%;
+    text-align: left;
+}
+
+div.my-footer {
+    background-color: #b0a160;
+    color: #434e52;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    height: 33px;
+    width: 100%;
+    text-align: center;
+}
+
+div.my-footer a{
+  font-weight: bold;
+  color: #434e52;
+
+}
+ul li{
+  color:whitesmoke;
+  list-style-type: square;
+  font-size:30px;
+
+}
+
+ol li{
+  color:whitesmoke;
+  font-size:30px;
+
+}
+
+ol li{
+  font-size:30px;
+
+}
+
+  
+  
+.question{
+  background-color:#cfafaf;
+  font-size: 43px;
+  color:#000000;
+  text-align:center;
+
+}
+
+.pull-left {
+  float: left;
+  width: 49%;
+}
+.pull-right {
+  float: right;
+  width: 49%;
+  padding-left: 1%;
+
+}
+
+.pull-right2 {
+  float: right;
+  width: 35%;
+  padding-left: 1%;
+
+}
+
+/*code*/
+
+pre {
+  border:1px solid whitesmoke;
+  padding: 0.50em;
+  overflow-x: auto;
+  color:whitesmoke;
+}
+
+.remark-code, .remark-inline-code { 
+  font-family: monospace;
+  font-size: 30px;
+  color:whitesmoke;
+}
+
+
+
+.remark-inline-code{
+ color:#F7B894;
+}
+
+.hljs-github .hljs {
+    display: block;
+    overflow-x: auto;
+    padding: .5em;
+}
+
+.remark-code-has-line-highlighted .remark-code-line:not(.remark-code-line-highlighted) {
+  opacity: 0.8;
+}
+
+.remark-code-line-highlighted {
+  background-color: #d7c7ac;
+
+}
+
+.strike{
+  text-decoration: line-through;
+
+}
+
+.left-panel {
+  width: 44%;
+  float: left;
+}
+.right-panel {
+  width: 55%;
+  float: right;
+  padding-left: 1%;
+}
+
+
+
+td{
+  font-size:32px;
+  padding:5px;
+  text-align:center;
+  
+}
+
+th, td{padding: 5px;
+  font-size:30px;
+}
+
+tr:nth-child(odd) {color: #DFD9BF;}
+
+tfoot, tr:nth-child(even) { 
+  background: transparent;
+  color:#DFD9BF;
+}
+
+th{
+  background: #DFD9BF;
+  color:black;
+}
+
+
+table, th, td {
+  border: 1px solid;
+  border-color: #464026;
+
+}
+
+.reference{
+    position: fixed;
+    bottom: 33px;
+    right:35px;
+    font-size:18px;
+    font-family: 'Lora';
+    color:whitesmoke;
+
+}
+
+.footnote{
+    position: fixed;
+    bottom: 33px;
+    font-size:18px;
+    font-family: 'Lora';
+    color:whitesmoke;
+
+}
+
+.large{
+  font-size:50px;
+}
+
+
+
+.remark-slide-number {
+  font-size: 10pt;
+  margin-bottom: -11.6px;
+  margin-right: 10px;
+  color: whitesmoke; 
+  opacity: 1; /* default: 0.5 */
+}
