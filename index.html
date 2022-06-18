@@ -28,6 +28,8 @@ class: title-slide, middle
 
 ---
 
+class: middle
+
 ## About Me
 
 Teaching Context
@@ -126,7 +128,16 @@ class:center
 ---
 
 
-OPEN-ACCESS
+class: middle 
+
+## Open-Access
+
+- Cost of books and supplies for a student at a four-year university in 2021 was estimated to be $1240 per year ([Hanson, 2021](https://educationdata.org/average-cost-of-college-textbooks)) in the United States. 
+
+
+- About 11% of the students indicated that they skipped meals in order to afford books and course materials ([Hanson, 2021](https://educationdata.org/average-cost-of-college-textbooks)).
+
+- The bayesrulesbook.com page has been accessed from more than 150 countries.
 
 ---
 
@@ -154,18 +165,43 @@ A screen reader is an assistive technology that supports blind or visually impai
 
 ---
 
+class: middle center
+
+
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/l-G4kKTuDHI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+
+The video shows use of a screen reader briefly. 
+---
 
 class: middle
 
-Screen reader video
+## Alternate Text
+
+- "Alt text" describes contents of an image. 
+- It is used in HTML pages. 
+- Screen-readers cannot read images but can read alt text. 
+- Alt text has to be provided. 
+
 
 ---
 
 class: middle
+
+In (northern) Summer 2020, we had lots of images but no way to provide alternate text within HTML so we asked for alternate text feature.
 
 &lt;img src="img/alttext-github-issue.png" title="GitHub issue created on RStudio's RMarkdown repo asking for fig.alt option to be created" alt="GitHub issue created on RStudio's RMarkdown repo asking for fig.alt option to be created" width="100%" style="display: block; margin: auto;" /&gt;
 
 ---
+
+class: middle
+
+
+
+
+
+---
+
+class: middle
 
 ---
 
@@ -181,7 +217,17 @@ Teaching Accessibility
 
 ---
 
-Diagram about R Markdown history. 
+class: center
+
+
+&lt;img src="index_files/figure-html/unnamed-chunk-3-1.png" title="A timeline titled brief history of knitr. That points out that the initial commit was in October 2011, first download on CRAN was in October 2012, alt-text feature was requested in July 2020, feature was made available in January 2021" alt="A timeline titled brief history of knitr. That points out that the initial commit was in October 2011, first download on CRAN was in October 2012, alt-text feature was requested in July 2020, feature was made available in January 2021" style="display: block; margin: auto;" /&gt;
+
+
+
+--
+
+Between first CRAN release and alt-text feature request, there were 22,622,426 CRAN downloads of knitr.
+
 
 ---
 
@@ -280,7 +326,7 @@ class: middle
 ## Data Visualization - Colors
 
 
-&lt;img src="index_files/figure-html/unnamed-chunk-4-1.png" title="Three separate scatterplots in three rows showing bill depth and bill length of three separate species of penguins Adelie, Chinstrap, and Gentoo respectively and the  points representing each observation are red, green, and blue respectively." alt="Three separate scatterplots in three rows showing bill depth and bill length of three separate species of penguins Adelie, Chinstrap, and Gentoo respectively and the  points representing each observation are red, green, and blue respectively." style="display: block; margin: auto;" /&gt;
+&lt;img src="index_files/figure-html/unnamed-chunk-6-1.png" title="Three separate scatterplots in three rows showing bill depth and bill length of three separate species of penguins Adelie, Chinstrap, and Gentoo respectively and the  points representing each observation are red, green, and blue respectively." alt="Three separate scatterplots in three rows showing bill depth and bill length of three separate species of penguins Adelie, Chinstrap, and Gentoo respectively and the  points representing each observation are red, green, and blue respectively." style="display: block; margin: auto;" /&gt;
 
 ---
 
@@ -293,7 +339,7 @@ class: middle
 colorblindr::cvd_grid(fig) 
 ```
 
-&lt;img src="index_files/figure-html/unnamed-chunk-6-1.png" title="A 2 by 2 grid of four scatterplots. The scatterplots are the same as the scatterplot in the previous figure except for colors. From left to right and top to bottom the plots read deutanomly, protanomly, tritanomly, and desaturated" alt="A 2 by 2 grid of four scatterplots. The scatterplots are the same as the scatterplot in the previous figure except for colors. From left to right and top to bottom the plots read deutanomly, protanomly, tritanomly, and desaturated" width="40%" style="display: block; margin: auto;" /&gt;
+&lt;img src="index_files/figure-html/unnamed-chunk-8-1.png" title="A 2 by 2 grid of four scatterplots. The scatterplots are the same as the scatterplot in the previous figure except for colors. From left to right and top to bottom the plots read deutanomly, protanomly, tritanomly, and desaturated" alt="A 2 by 2 grid of four scatterplots. The scatterplots are the same as the scatterplot in the previous figure except for colors. From left to right and top to bottom the plots read deutanomly, protanomly, tritanomly, and desaturated" width="40%" style="display: block; margin: auto;" /&gt;
 
 
 ---
@@ -333,12 +379,10 @@ palette.colors(palette = "Okabe-Ito")
 ```
 
 ```
-##         black        orange       skyblue   bluishgreen 
-##     "#000000"     "#E69F00"     "#56B4E9"     "#009E73" 
-##        yellow          blue    vermillion reddishpurple 
-##     "#F0E442"     "#0072B2"     "#D55E00"     "#CC79A7" 
-##          gray 
-##     "#999999"
+##         black        orange       skyblue   bluishgreen        yellow          blue    vermillion 
+##     "#000000"     "#E69F00"     "#56B4E9"     "#009E73"     "#F0E442"     "#0072B2"     "#D55E00" 
+## reddishpurple          gray 
+##     "#CC79A7"     "#999999"
 ```
 
 
@@ -353,7 +397,7 @@ fig + colorblindr::scale_color_OkabeIto()
 ```
 
 
-&lt;img src="index_files/figure-html/unnamed-chunk-12-1.png" title="Three separate scatterplots in three rows showing bill depth and bill length of three separate species of penguins Adelie, Chinstrap, and Gentoo respectively and the  points representing each observation are orange, blue, and green respectively." alt="Three separate scatterplots in three rows showing bill depth and bill length of three separate species of penguins Adelie, Chinstrap, and Gentoo respectively and the  points representing each observation are orange, blue, and green respectively." width="45%" style="display: block; margin: auto;" /&gt;
+&lt;img src="index_files/figure-html/unnamed-chunk-14-1.png" title="Three separate scatterplots in three rows showing bill depth and bill length of three separate species of penguins Adelie, Chinstrap, and Gentoo respectively and the  points representing each observation are orange, blue, and green respectively." alt="Three separate scatterplots in three rows showing bill depth and bill length of three separate species of penguins Adelie, Chinstrap, and Gentoo respectively and the  points representing each observation are orange, blue, and green respectively." width="45%" style="display: block; margin: auto;" /&gt;
 
 
 ---
@@ -376,12 +420,7 @@ class: middle
 
 ## Data Verbalization
 
-### Alternate Text
 
-- "Alt text" describes contents of an image. 
-- It is used in HTML pages. 
-- Screen-readers cannot read images but can read alt text. 
-- Alt text has to be provided. 
 - We can verbalize data via alternate text.
 
 ---
@@ -460,7 +499,7 @@ class: middle
 
 
 
-&lt;img src="index_files/figure-html/unnamed-chunk-14-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="index_files/figure-html/unnamed-chunk-16-1.png" style="display: block; margin: auto;" /&gt;
 
 The automated alternate text for this plot is on the next slide.
 
@@ -602,10 +641,10 @@ class: center middle
 |Accessibility and Inclusion Criteria |Questions                                                                                      |
 |:------------------------------------|:----------------------------------------------------------------------------------------------|
 |Inclusivity of students              |Do examples avoid the necessity of specialized knowledge?                                      |
-|                                     |Do names and pronouns reflect diverse cultural and personal identities?                        |
-|                                     |Are there examples that could potentially speak to younger as well as older students?          |
-|                                     |Does the delivery embrace mistakes and critical thinking?                                      |
-|                                     |Are efforts made to accommodate different academic experiences and create a shared foundation? |
+|NA                                   |Do names and pronouns reflect diverse cultural and personal identities?                        |
+|NA                                   |Are there examples that could potentially speak to younger as well as older students?          |
+|NA                                   |Does the delivery embrace mistakes and critical thinking?                                      |
+|NA                                   |Are efforts made to accommodate different academic experiences and create a shared foundation? |
 
 
 
@@ -755,19 +794,6 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
     deleted = true;
   });
 })();
-// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
-// screen reader (see PR #262)
-(function(d) {
-  let res = {};
-  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
-    const t = tr.querySelector('td:nth-child(2)').innerText;
-    tr.querySelectorAll('td:first-child .key').forEach(key => {
-      const k = key.innerText;
-      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
-    });
-  });
-  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
-})(document);
 (function() {
   "use strict"
   // Replace <script> tags in slides area to make them executable

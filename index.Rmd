@@ -37,6 +37,8 @@ theme_set(theme_gray(base_size = 14))
 
 ---
 
+class: middle
+
 ## About Me
 
 Teaching Context
@@ -137,7 +139,16 @@ knitr::include_graphics("img/bayes-rules-hex.png")
 ---
 
 
-OPEN-ACCESS
+class: middle 
+
+## Open-Access
+
+- Cost of books and supplies for a student at a four-year university in 2021 was estimated to be $1240 per year ([Hanson, 2021](https://educationdata.org/average-cost-of-college-textbooks)) in the United States. 
+
+
+- About 11% of the students indicated that they skipped meals in order to afford books and course materials ([Hanson, 2021](https://educationdata.org/average-cost-of-college-textbooks)).
+
+- The bayesrulesbook.com page has been accessed from more than 150 countries.
 
 ---
 
@@ -165,20 +176,45 @@ A screen reader is an assistive technology that supports blind or visually impai
 
 ---
 
+class: middle center
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/l-G4kKTuDHI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+The video shows use of a screen reader briefly. 
+---
 
 class: middle
 
-Screen reader video
+## Alternate Text
+
+- "Alt text" describes contents of an image. 
+- It is used in HTML pages. 
+- Screen-readers cannot read images but can read alt text. 
+- Alt text has to be provided. 
+
 
 ---
 
 class: middle
+
+In (northern) Summer 2020, we had lots of images but no way to provide alternate text within HTML so we asked for alternate text feature.
 
 ```{r fig.alt="GitHub issue created on RStudio's RMarkdown repo asking for fig.alt option to be created", fig.align='center', out.width="100%"}
 knitr::include_graphics("img/alttext-github-issue.png")
 ```
 
 ---
+
+class: middle
+
+
+
+
+
+---
+
+class: middle
 
 ---
 
@@ -194,7 +230,67 @@ Teaching Accessibility
 
 ---
 
-Diagram about R Markdown history. 
+class: center
+
+
+```{r echo=FALSE, fig.alt="A timeline titled brief history of knitr. That points out that the initial commit was in October 2011, first download on CRAN was in October 2012, alt-text feature was requested in July 2020, feature was made available in January 2021", fig.align='center'}
+
+library(tidyverse)
+
+date <- lubridate::as_date(c("2011-10-18", 
+                             "2012-10-01",
+                             "2020-07-19",
+                             "2021-01-22"))
+
+event <- c("initial commit", "first download on CRAN",
+           "alt-text feature requested",
+           "feature available")
+
+xend <- lubridate::as_date(c("2010-10-01", "2022-12-31"))
+
+timeline <- data.frame(date = date, event=event)
+
+timeline %>% 
+  ggplot(aes(x = date)) +
+  geom_segment(data = timeline, aes(y = 0, yend = c(5, -5, 5, -5), 
+                                    x = date, xend = date)) +
+  theme_classic() +
+  geom_hline(yintercept=0, 
+                color = "black", size = 0.3) +
+  ylim(-7,7) +
+  xlim(xend[1], xend[2]) +
+  theme(axis.line.y = element_blank(),
+        axis.text.y = element_blank(),
+        axis.title.x = element_blank(),
+        axis.title.y = element_blank(),
+        axis.ticks.y = element_blank(),
+        axis.text.x = element_blank(),
+        axis.ticks.x = element_blank(),
+        axis.line.x = element_blank()) +
+  geom_text(data = timeline, x = date, y = c(-1, 1, -1, 1),
+            label = c("Oct 2011", "Oct 2012", "July 2020","Jan 2021"), 
+            angle = 90, size = 5) +
+  geom_text(data = timeline, x = date, y = c(5.5, -5.5, 5.5, -5.5),
+            label = event,
+            size=6) +
+  geom_point(aes(y = c(5, -5, 5, -5)), size=3) + 
+  labs(title = "A brief timeline of knitr") +
+  theme(plot.title = element_text(size = 20))
+
+```
+
+```{r echo=FALSE}
+options(scipen = 999)
+logs <- cranlogs::cran_downloads(package = "knitr", 
+                         from = "2012-10-01", 
+                         to = "2020-07-19")
+
+```
+
+--
+
+Between first CRAN release and alt-text feature request, there were `r prettyNum(sum(logs$count), big.mark = ",", scientific = FALSE)` CRAN downloads of knitr.
+
 
 ---
 
@@ -406,12 +502,7 @@ class: middle
 
 ## Data Verbalization
 
-### Alternate Text
 
-- "Alt text" describes contents of an image. 
-- It is used in HTML pages. 
-- Screen-readers cannot read images but can read alt text. 
-- Alt text has to be provided. 
 - We can verbalize data via alternate text.
 
 ---
