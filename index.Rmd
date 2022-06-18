@@ -280,7 +280,6 @@ timeline %>%
 ```
 
 ```{r echo=FALSE}
-options(scipen = 999)
 logs <- cranlogs::cran_downloads(package = "knitr", 
                          from = "2012-10-01", 
                          to = "2020-07-19")
@@ -294,9 +293,17 @@ Between first CRAN release and alt-text feature request, there were `r prettyNum
 
 ---
 
-Relationship between curriculum and tools and events.
+class: middle
+
+![:col_header 
+  <span style="font-size:50px; color:whitesmoke;">Curriculum Does Not Teach Accessibility </span>,
+  <span style="font-size:50px; color:whitesmoke;">Developers Create Inaccessible Tools</span>,
+  <span style="font-size:50px; color:whitesmoke;">Data Scientists Create Inacessible Products</span>
+              ]
 
 ---
+
+
 class: middle
 
 ## Acknowledgement
@@ -503,56 +510,16 @@ class: middle
 ## Data Verbalization
 
 
-- We can verbalize data via alternate text.
+We can verbalize data via alternate text.
 
----
+````markdown
+`r ''````{r fig.alt=""}
+plot(cars)
+```
+````
 
-class: center middle 
+fig.cap vs. fig.alt
 
-## (some) Chunk Options in R Markdown
-
-<table align = "center">
-
-
-
-<tr>
-
-<td>warning = FALSE</td>
-<td>hides warning</td>
-
-</tr>
-
-
-<tr>
-
-<td>fig.cap = "Some figure caption"</td>
-<td>creates a figure caption</td>
-
-</tr>
-
-<tr>
-
-<td>fig.align = "center"</td>
-<td>centers the figure in the page</td>
-
-</tr>
-
-<tr>
-
-<td>fig.alt = "Some alternate text for figure"</td>
-<td>creates alternate text for figures</td>
-
-</tr>
-
-
-
-</table>
-
----
-
-
-
----
 
 
 ---
@@ -586,7 +553,8 @@ mtcars <- mtcars %>%
 
 ```{r fig.align="center", fig.height=4}
 example_barplot <- ggplot(mtcars, aes(x = transmission)) +
-  geom_bar()
+  geom_bar() +
+  theme(axis.text = element_text(size = 20))
 example_barplot
 ```
 

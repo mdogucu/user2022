@@ -231,9 +231,17 @@ Between first CRAN release and alt-text feature request, there were 22,622,426 C
 
 ---
 
-Relationship between curriculum and tools and events.
+class: middle
+
+![:col_header 
+  &lt;span style="font-size:50px; color:whitesmoke;"&gt;Curriculum Does Not Teach Accessibility &lt;/span&gt;,
+  &lt;span style="font-size:50px; color:whitesmoke;"&gt;Developers Create Inaccessible Tools&lt;/span&gt;,
+  &lt;span style="font-size:50px; color:whitesmoke;"&gt;Data Scientists Create Inacessible Products&lt;/span&gt;
+              ]
 
 ---
+
+
 class: middle
 
 ## Acknowledgement
@@ -421,56 +429,16 @@ class: middle
 ## Data Verbalization
 
 
-- We can verbalize data via alternate text.
+We can verbalize data via alternate text.
 
----
+````markdown
+```{r fig.alt=""}
+plot(cars)
+```
+````
 
-class: center middle 
+fig.cap vs. fig.alt
 
-## (some) Chunk Options in R Markdown
-
-&lt;table align = "center"&gt;
-
-
-
-&lt;tr&gt;
-
-&lt;td&gt;warning = FALSE&lt;/td&gt;
-&lt;td&gt;hides warning&lt;/td&gt;
-
-&lt;/tr&gt;
-
-
-&lt;tr&gt;
-
-&lt;td&gt;fig.cap = "Some figure caption"&lt;/td&gt;
-&lt;td&gt;creates a figure caption&lt;/td&gt;
-
-&lt;/tr&gt;
-
-&lt;tr&gt;
-
-&lt;td&gt;fig.align = "center"&lt;/td&gt;
-&lt;td&gt;centers the figure in the page&lt;/td&gt;
-
-&lt;/tr&gt;
-
-&lt;tr&gt;
-
-&lt;td&gt;fig.alt = "Some alternate text for figure"&lt;/td&gt;
-&lt;td&gt;creates alternate text for figures&lt;/td&gt;
-
-&lt;/tr&gt;
-
-
-
-&lt;/table&gt;
-
----
-
-
-
----
 
 
 ---
