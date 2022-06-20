@@ -39,9 +39,11 @@ theme_set(theme_gray(base_size = 14))
 
 class: middle
 
-## About Me
+## Teaching Context
 
-Teaching Context
+- Have been teaching at University of California Irvine since July 2019.
+- Taught undergraduate and graduate courses on statistics, computing, and data science.
+- Teach (with) R mostly.
 
 ---
 
@@ -206,11 +208,8 @@ knitr::include_graphics("img/alttext-github-issue.png")
 
 ---
 
-class: middle
 
-
-
-
+https://twitter.com/dcastelvecchi/status/1526822756876156928?s=20&t=0-1H86oxLtFmXE71t5lVNw
 
 ---
 
@@ -288,7 +287,7 @@ logs <- cranlogs::cran_downloads(package = "knitr",
 
 --
 
-Between first CRAN release and alt-text feature request, there were `r prettyNum(sum(logs$count), big.mark = ",", scientific = FALSE)` CRAN downloads of knitr.
+Between first CRAN download and alt-text feature request, there were `r prettyNum(sum(logs$count), big.mark = ",", scientific = FALSE)` CRAN downloads of knitr.
 
 
 ---
@@ -656,45 +655,12 @@ knitr::include_graphics("img/hist-braille.png")
 
 ---
 
-class: middle
+class: middle rec
 
-Close-Captioning
-
----
-
-Dashboard Accessibility
+Different representations of data is one way of introducing accessibility to students but it is not meant to be a complete introduction to accessibility.
 
 ---
 
----
-
-class: middle
-
-
-## ADA
-
-Americans With Disabilities Act (ADA) of 1990 prohibits discrimination against individuals with disabilities in all areas of public life.
-
-**Ableism** is discrimination in favor of able-bodied people.
-
----
-
----
-
-class: center middle
-
-
-```{r checklist3, echo=FALSE}
-readxl::read_xlsx("accessibility-checklist.xlsx") %>%  
-  slice(6:11) %>% 
-  knitr::kable() 
-  
-```
-
-
-
-
----
 
 class: middle inverse
 
