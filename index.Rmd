@@ -50,9 +50,9 @@ class: middle
 class: middle
 
 ![:col_header 
-  <span style="font-size:50px; color:whitesmoke;">Teaching Accessibly </span>,
-  <span style="font-size:50px; color:whitesmoke;">Teaching Accessibility</span>,
-  <span style="font-size:45px; color:whitesmoke;">Recommendations for the Community</span>
+  <span class="framed">Teaching Accessibly </span>,
+  <span class="framed">Teaching Accessibility</span>,
+  <span style="font-size:45px; color:whitesmoke; border-style: solid; display: inline-block;">Recommendations for the Community</span>
               ]
 
 
@@ -145,7 +145,7 @@ class: middle
 
 ## Open-Access
 
-- Cost of books and supplies for a student at a four-year university in 2021 was estimated to be $1240 per year ([Hanson, 2021](https://educationdata.org/average-cost-of-college-textbooks)) in the United States. 
+- Cost of books and supplies for a student at a four-year university in 2021 was estimated to be $1240 per year ([Hanson, 2021](https://educationdata.org/average-cost-of-college-textbooks)). 
 
 
 - About 11% of the students indicated that they skipped meals in order to afford books and course materials ([Hanson, 2021](https://educationdata.org/average-cost-of-college-textbooks)).
@@ -292,12 +292,24 @@ Between first CRAN download and alt-text feature request, there were `r prettyNu
 
 ---
 
+
 class: middle
 
 ![:col_header 
-  <span style="font-size:50px; color:whitesmoke;">Curriculum Does Not Teach Accessibility </span>,
-  <span style="font-size:50px; color:whitesmoke;">Developers Create Inaccessible Tools</span>,
-  <span style="font-size:50px; color:whitesmoke;">Data Scientists Create Inacessible Products</span>
+  ,
+  <span class="framed">Developers Create  Tools with no Accessibility Support</span>,
+  <span class="framed">Data Scientists Create Inacessible Products</span>
+              ]
+
+
+---
+
+class: middle
+
+![:col_header 
+  <span class="framed">Curriculum Does Not Teach Accessibility </span>,
+  <span class="framed">Developers Create  Tools with no Accessibility Support</span>,
+  <span class="framed">Data Scientists Create Inacessible Products</span>
               ]
 
 ---
@@ -374,13 +386,13 @@ class: middle
 
 ## Learning Objectives
 
-- Students should get familiar with American Disabilities Act. 
+- Students should get familiar with American Disabilities Act and/or United Nations Convention on the Rights of Persons with Disabilities. 
 - Students should use at least one assistive technology (i.e. screen reader).
 - Students should consider different representations of data.
 
+
+
 ---
-
-
 
 class: middle
 
@@ -404,10 +416,12 @@ fig <- ggplot(penguins,
            y = bill_length_mm,
            shape = species,
            color = species)) +
-  geom_point(size = 4) +
+  geom_point(size = 4, show.legend = FALSE) +
   facet_grid(species~.) +
   labs(x = "Bill Depth (mm)",
-       y = "Bill Length (mm)")
+       y = "Bill Length (mm)") +
+  theme_bw() +
+  theme(text = element_text(size = 20))
 
 fig
 ```
@@ -416,52 +430,25 @@ fig
 
 class: middle
 
+
 ### Color Blindness Simulator 
 
 ```{r echo=TRUE, eval=FALSE}
 colorblindr::cvd_grid(fig) 
 ```
 
+
+---
+
+class: middle
+
 ```{r fig.align='center', out.width='40%', fig.alt="A 2 by 2 grid of four scatterplots. The scatterplots are the same as the scatterplot in the previous figure except for colors. From left to right and top to bottom the plots read deutanomly, protanomly, tritanomly, and desaturated"}
 library(colorblindr)
-cvd_grid(fig, severity = 1) +
-  theme_gray(base_size = 12)
+cvd_grid(fig, severity = 1) 
 ```
 
 
 ---
-
-class: middle
-
-[Color blindness simulation](https://www.color-blindness.com/coblis-color-blindness-simulator/): red-blind/protanopia
-
-```{r echo=FALSE, out.width="60%", fig.align='center', fig.alt="The same scatterplots are displayed but Adelie and Chinstrap penguin data are shown with a very similar yellow-brownish green. There is no red visible."}
-knitr::include_graphics("img/red-blind.png")
-```
-
----
-
-class: middle
-
-[Color blindness simulation](https://www.color-blindness.com/coblis-color-blindness-simulator/): green-blind/deuteranopia
-
-```{r echo=FALSE, out.width="60%", fig.align='center', fig.alt="The same scatterplots are displayed but Adelie and Chinstrap penguin data are shown with a very similar yellow-brownish green. There is no red visible. The gray background is also a bright pink."}
-knitr::include_graphics("img/green-blind.png")
-```
-
-
----
-
-class: middle
-
-[Color blindness simulation](https://www.color-blindness.com/coblis-color-blindness-simulator/): blue-blind/tritanopia
-
-```{r echo=FALSE, out.width="60%", fig.align='center', fig.alt="The same scatterplots are displayed but Adelie and Gentoo penguin data are shown with a very similar greenish blue."}
-knitr::include_graphics("img/blue-blind.png")
-```
-
----
-
 class: middle
 
 ### Okabe-Ito Color Palette 
@@ -511,17 +498,25 @@ class: middle
 
 We can verbalize data via alternate text.
 
+```{r echo=FALSE, fig.align="center", fig.alt="", fig.cap="The speed of cars (mph) and the distances (ft) taken to stop", fig.alt="The scatterplot shows speed ranging from about 0 to 25 on the x-axis and dist ranging from 0 to 120 on the y-axis. There is a moderate positive linear relationship.", fig.height=4}
+plot(cars, cex.lab=1.5, cex.axis=1.5, cex.main=1.5, cex.sub=1.5)
+```
+
+---
+
+class: middle
+
 ````markdown
-`r ''````{r fig.alt=""}
+`r ''````{r fig.cap="The speed of cars (mph) and the distances (ft) taken to stop", 
+fig.alt="The scatterplot shows speed ranging from about 0 to 25 on the 
+x-axis and dist ranging from 0 to 120 on the y-axis. There is a moderate 
+positive linear relationship."}
 plot(cars)
 ```
 ````
 
-fig.cap vs. fig.alt
-
-
-
 ---
+
 
 class: middle
 
@@ -592,18 +587,35 @@ class: middle
 
 Data sonification is the presentation of data as sound. 
 
-Examples:
-
-[SAS Graphics Accelerator Examples](https://support.sas.com/software/products/graphics-accelerator/samples/index.html)
-
-[SAS Graphics Accelerator Chrome Extension](https://chrome.google.com/webstore/detail/sas-graphics-accelerator/ockmipfaiiahknplinepcaogdillgoko?hl=en)
-
-
-R example:
+.pull-left[
 
 ```{r eval=FALSE, echo=TRUE}
-sonify::sonify(1:10)
+x <- 1:10
+y <- 1:10
+plot(x, y)
+sonify::sonify(x,y)
+
 ```
+
+<audio controls>
+      <source src="audio/sonify.mp3" type="audio/mpeg">
+      Your browser does not support the audio element. </audio>
+
+]
+
+.pull-right[
+
+```{r echo=FALSE, eval=TRUE, fig.align="center", fig.height=4}
+
+x <- 1:10
+y <- 1:10
+plot(x, y)
+
+```
+
+
+]
+
 
 ---
 
@@ -612,6 +624,7 @@ class: middle
 ## Data Tactualization
 
 Data tactulization refers to making data visualization in a form so that it can be touchable by fingers. 
+The video shows printing of a tactile boxplot.
 
 
 .center[

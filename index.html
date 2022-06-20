@@ -41,9 +41,9 @@ class: middle
 class: middle
 
 ![:col_header 
-  &lt;span style="font-size:50px; color:whitesmoke;"&gt;Teaching Accessibly &lt;/span&gt;,
-  &lt;span style="font-size:50px; color:whitesmoke;"&gt;Teaching Accessibility&lt;/span&gt;,
-  &lt;span style="font-size:45px; color:whitesmoke;"&gt;Recommendations for the Community&lt;/span&gt;
+  &lt;span class="framed"&gt;Teaching Accessibly &lt;/span&gt;,
+  &lt;span class="framed"&gt;Teaching Accessibility&lt;/span&gt;,
+  &lt;span style="font-size:45px; color:whitesmoke; border-style: solid; display: inline-block;"&gt;Recommendations for the Community&lt;/span&gt;
               ]
 
 
@@ -134,7 +134,7 @@ class: middle
 
 ## Open-Access
 
-- Cost of books and supplies for a student at a four-year university in 2021 was estimated to be $1240 per year ([Hanson, 2021](https://educationdata.org/average-cost-of-college-textbooks)) in the United States. 
+- Cost of books and supplies for a student at a four-year university in 2021 was estimated to be $1240 per year ([Hanson, 2021](https://educationdata.org/average-cost-of-college-textbooks)). 
 
 
 - About 11% of the students indicated that they skipped meals in order to afford books and course materials ([Hanson, 2021](https://educationdata.org/average-cost-of-college-textbooks)).
@@ -230,12 +230,24 @@ Between first CRAN download and alt-text feature request, there were 22,622,426 
 
 ---
 
+
 class: middle
 
 ![:col_header 
-  &lt;span style="font-size:50px; color:whitesmoke;"&gt;Curriculum Does Not Teach Accessibility &lt;/span&gt;,
-  &lt;span style="font-size:50px; color:whitesmoke;"&gt;Developers Create Inaccessible Tools&lt;/span&gt;,
-  &lt;span style="font-size:50px; color:whitesmoke;"&gt;Data Scientists Create Inacessible Products&lt;/span&gt;
+  ,
+  &lt;span class="framed"&gt;Developers Create  Tools with no Accessibility Support&lt;/span&gt;,
+  &lt;span class="framed"&gt;Data Scientists Create Inacessible Products&lt;/span&gt;
+              ]
+
+
+---
+
+class: middle
+
+![:col_header 
+  &lt;span class="framed"&gt;Curriculum Does Not Teach Accessibility &lt;/span&gt;,
+  &lt;span class="framed"&gt;Developers Create  Tools with no Accessibility Support&lt;/span&gt;,
+  &lt;span class="framed"&gt;Data Scientists Create Inacessible Products&lt;/span&gt;
               ]
 
 ---
@@ -310,13 +322,13 @@ class: middle
 
 ## Learning Objectives
 
-- Students should get familiar with American Disabilities Act. 
+- Students should get familiar with American Disabilities Act and/or United Nations Convention on the Rights of Persons with Disabilities. 
 - Students should use at least one assistive technology (i.e. screen reader).
 - Students should consider different representations of data.
 
+
+
 ---
-
-
 
 class: middle
 
@@ -339,6 +351,7 @@ class: middle
 
 class: middle
 
+
 ### Color Blindness Simulator 
 
 
@@ -346,36 +359,15 @@ class: middle
 colorblindr::cvd_grid(fig) 
 ```
 
+
+---
+
+class: middle
+
 &lt;img src="index_files/figure-html/unnamed-chunk-8-1.png" title="A 2 by 2 grid of four scatterplots. The scatterplots are the same as the scatterplot in the previous figure except for colors. From left to right and top to bottom the plots read deutanomly, protanomly, tritanomly, and desaturated" alt="A 2 by 2 grid of four scatterplots. The scatterplots are the same as the scatterplot in the previous figure except for colors. From left to right and top to bottom the plots read deutanomly, protanomly, tritanomly, and desaturated" width="40%" style="display: block; margin: auto;" /&gt;
 
 
 ---
-
-class: middle
-
-[Color blindness simulation](https://www.color-blindness.com/coblis-color-blindness-simulator/): red-blind/protanopia
-
-&lt;img src="img/red-blind.png" title="The same scatterplots are displayed but Adelie and Chinstrap penguin data are shown with a very similar yellow-brownish green. There is no red visible." alt="The same scatterplots are displayed but Adelie and Chinstrap penguin data are shown with a very similar yellow-brownish green. There is no red visible." width="60%" style="display: block; margin: auto;" /&gt;
-
----
-
-class: middle
-
-[Color blindness simulation](https://www.color-blindness.com/coblis-color-blindness-simulator/): green-blind/deuteranopia
-
-&lt;img src="img/green-blind.png" title="The same scatterplots are displayed but Adelie and Chinstrap penguin data are shown with a very similar yellow-brownish green. There is no red visible. The gray background is also a bright pink." alt="The same scatterplots are displayed but Adelie and Chinstrap penguin data are shown with a very similar yellow-brownish green. There is no red visible. The gray background is also a bright pink." width="60%" style="display: block; margin: auto;" /&gt;
-
-
----
-
-class: middle
-
-[Color blindness simulation](https://www.color-blindness.com/coblis-color-blindness-simulator/): blue-blind/tritanopia
-
-&lt;img src="img/blue-blind.png" title="The same scatterplots are displayed but Adelie and Gentoo penguin data are shown with a very similar greenish blue." alt="The same scatterplots are displayed but Adelie and Gentoo penguin data are shown with a very similar greenish blue." width="60%" style="display: block; margin: auto;" /&gt;
-
----
-
 class: middle
 
 ### Okabe-Ito Color Palette 
@@ -406,7 +398,7 @@ fig + colorblindr::scale_color_OkabeIto()
 ```
 
 
-&lt;img src="index_files/figure-html/unnamed-chunk-14-1.png" title="Three separate scatterplots in three rows showing bill depth and bill length of three separate species of penguins Adelie, Chinstrap, and Gentoo respectively and the  points representing each observation are orange, blue, and green respectively." alt="Three separate scatterplots in three rows showing bill depth and bill length of three separate species of penguins Adelie, Chinstrap, and Gentoo respectively and the  points representing each observation are orange, blue, and green respectively." width="45%" style="display: block; margin: auto;" /&gt;
+&lt;img src="index_files/figure-html/unnamed-chunk-11-1.png" title="Three separate scatterplots in three rows showing bill depth and bill length of three separate species of penguins Adelie, Chinstrap, and Gentoo respectively and the  points representing each observation are orange, blue, and green respectively." alt="Three separate scatterplots in three rows showing bill depth and bill length of three separate species of penguins Adelie, Chinstrap, and Gentoo respectively and the  points representing each observation are orange, blue, and green respectively." width="45%" style="display: block; margin: auto;" /&gt;
 
 
 ---
@@ -432,17 +424,26 @@ class: middle
 
 We can verbalize data via alternate text.
 
+&lt;div class="figure" style="text-align: center"&gt;
+&lt;img src="index_files/figure-html/unnamed-chunk-12-1.png" alt="The scatterplot shows speed ranging from about 0 to 25 on the x-axis and dist ranging from 0 to 120 on the y-axis. There is a moderate positive linear relationship."  /&gt;
+&lt;p class="caption"&gt;The speed of cars (mph) and the distances (ft) taken to stop&lt;/p&gt;
+&lt;/div&gt;
+
+---
+
+class: middle
+
 ````markdown
-```{r fig.alt=""}
+```{r fig.cap="The speed of cars (mph) and the distances (ft) taken to stop", 
+fig.alt="The scatterplot shows speed ranging from about 0 to 25 on the 
+x-axis and dist ranging from 0 to 120 on the y-axis. There is a moderate 
+positive linear relationship."}
 plot(cars)
 ```
 ````
 
-fig.cap vs. fig.alt
-
-
-
 ---
+
 
 class: middle
 
@@ -468,7 +469,7 @@ class: middle
 
 
 
-&lt;img src="index_files/figure-html/unnamed-chunk-16-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="index_files/figure-html/unnamed-chunk-14-1.png" style="display: block; margin: auto;" /&gt;
 
 The automated alternate text for this plot is on the next slide.
 
@@ -515,19 +516,29 @@ class: middle
 
 Data sonification is the presentation of data as sound. 
 
-Examples:
-
-[SAS Graphics Accelerator Examples](https://support.sas.com/software/products/graphics-accelerator/samples/index.html)
-
-[SAS Graphics Accelerator Chrome Extension](https://chrome.google.com/webstore/detail/sas-graphics-accelerator/ockmipfaiiahknplinepcaogdillgoko?hl=en)
-
-
-R example:
+.pull-left[
 
 
 ```r
-sonify::sonify(1:10)
+x &lt;- 1:10
+y &lt;- 1:10
+plot(x, y)
+sonify::sonify(x,y)
 ```
+
+&lt;audio controls&gt;
+      &lt;source src="audio/sonify.mp3" type="audio/mpeg"&gt;
+      Your browser does not support the audio element. &lt;/audio&gt;
+
+]
+
+.pull-right[
+
+&lt;img src="index_files/figure-html/unnamed-chunk-17-1.png" style="display: block; margin: auto;" /&gt;
+
+
+]
+
 
 ---
 
@@ -536,6 +547,7 @@ class: middle
 ## Data Tactualization
 
 Data tactulization refers to making data visualization in a form so that it can be touchable by fingers. 
+The video shows printing of a tactile boxplot.
 
 
 .center[

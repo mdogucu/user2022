@@ -278,9 +278,16 @@ table, th, td {
 
 
 .remark-slide-number {
-  font-size: 10pt;
+  font-size: 14pt;
   margin-bottom: -11.6px;
   margin-right: 10px;
   color: whitesmoke; 
   opacity: 1; /* default: 0.5 */
+}
+
+.framed {
+  font-size:50px; 
+  color:whitesmoke; 
+  border-style: solid; 
+  display: inline-block;
 }
