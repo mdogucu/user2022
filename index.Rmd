@@ -773,6 +773,9 @@ Disclosure should fall on event (including meetups) organizers.
 class: middle rec
 
 Accessibility should not fall on volunteers.   
+
+<hr>
+
 In communities where work is solely based on volunteers then volunteer(s) for accessibility should be considered.
 
 ---
