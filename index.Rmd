@@ -1,7 +1,7 @@
 ---
 title: "Teaching Accessibly and Teaching Accessibility"
 author: "Mine Dogucu"
-subtitle: "Keynote Talk at useR! 2022 <br> [bit.ly/dogucu-talks](https://bit.ly/dogucu-talks)"
+subtitle: "Keynote Talk at useR! 2022 <br> [mdogucu.github.io/user2022](https://mdogucu.github.io/user2022)"
 date: "2022-06-23"
 output:
   xaringan::moon_reader:
@@ -35,6 +35,11 @@ theme_set(theme_gray(base_size = 14))
 ### `r rmarkdown::metadata$subtitle`
 ### `r rmarkdown::metadata$date`
 
+
+
+---
+layout:true
+<div class="footer"><span>mdogucu.github.io/user2022</span></div>
 ---
 
 class: middle
@@ -821,7 +826,9 @@ class: middle center
 
 
 
-<i class="fa-solid fa-link" title="Email Icon"></i> [bit.ly/dogucu-talks](https://bit.ly/dogucu-talks)
+<i class="fa-solid fa-laptop" title="Laptop Icon"></i> [mdogucu.github.io/user2022](https://mdogucu.github.io/user2022)
+
+<i class="fa-solid fa-house" title="House Icon"></i> [minedogucu.com](https://minedogucu.com)
 
 <i class="fa-brands fa-twitter" title="Twitter Icon"></i> [MineDogucu](https://twitter.com/MineDogucu)
 

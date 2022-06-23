@@ -303,3 +303,19 @@ table, th, td {
   border-style: solid; 
   display: inline-block;
 }
+
+div.footer {
+    background-color: #006666;
+    position: absolute;
+    bottom: 10px;
+    left: 0px;
+    height: 25px;
+    width: 20%;
+}
+div.footer span {
+    font-size: 13pt; /*  */ 
+    color: whitesmoke;
+    position: absolute;
+    left: 15px;
+    bottom: 1px;
+}
