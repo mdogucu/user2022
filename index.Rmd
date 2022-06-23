@@ -380,7 +380,7 @@ class: middle
         style="width:165px; margin-top:20px; border: 3px solid whitesmoke; padding: 10px;">
 
 JooYoung Seo  
-.font-20[University of Illonois Urbana-Champaign]
+.font-20[University of Illinois Urbana-Champaign]
 
 [<i class="fa-solid fa-house" title="Home Icon"></i>](https://jooyoungseo.github.io/)
 [<i class="fa-brands fa-github" title="GitHub Icon"></i>](https://github.com/jooyoungseo)
