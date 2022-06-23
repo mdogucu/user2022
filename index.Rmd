@@ -272,7 +272,7 @@ Teaching Accessibility
 class: center
 
 
-```{r echo=FALSE, fig.alt="A timeline titled brief history of knitr. That points out that the initial commit was in October 2011, first download on CRAN was in October 2012, alt-text feature was requested in July 2020, feature was made available in January 2021", fig.align='center'}
+```{r echo=FALSE, fig.alt="A timeline titled brief history of knitr. That points out that the initial commit was in October 2011, first download from CRAN was in October 2012, alt-text feature was requested in July 2020, feature was made available in January 2021", fig.align='center'}
 
 library(tidyverse)
 
@@ -281,11 +281,11 @@ date <- lubridate::as_date(c("2011-10-18",
                              "2020-07-19",
                              "2021-01-22"))
 
-event <- c("initial commit", "first download on CRAN",
+event <- c("initial commit", "first download from CRAN",
            "alt-text feature requested",
            "feature available")
 
-xend <- lubridate::as_date(c("2010-10-01", "2022-12-31"))
+xend <- lubridate::as_date(c("2010-09-01", "2022-12-31"))
 
 timeline <- data.frame(date = date, event=event)
 
@@ -538,7 +538,7 @@ class: middle
 
 We can verbalize data via alternate text.
 
-```{r echo=FALSE, fig.align="center", fig.alt="", fig.cap="The speed of cars (mph) and the distances (ft) taken to stop", fig.alt="The scatterplot shows speed ranging from about 0 to 25 on the x-axis and dist ranging from 0 to 120 on the y-axis. There is a moderate positive linear relationship.", fig.height=4}
+```{r echo=FALSE, fig.align="center", fig.alt="", fig.cap="The speed of cars (mph) and the distances (ft) taken to stop", fig.alt="The scatterplot shows speed ranging from about 0 to 25 mph on the x-axis and dist ranging from 0 to 120 ft on the y-axis. There is a moderate positive linear relationship.", fig.height=4}
 plot(cars, cex.lab=1.5, cex.axis=1.5, cex.main=1.5, cex.sub=1.5)
 ```
 
@@ -548,8 +548,8 @@ class: middle
 
 ````markdown
 `r ''````{r fig.cap="The speed of cars (mph) and the distances (ft) taken to stop", 
-fig.alt="The scatterplot shows speed ranging from about 0 to 25 on the 
-x-axis and dist ranging from 0 to 120 on the y-axis. There is a moderate 
+fig.alt="The scatterplot shows speed ranging from about 0 to 25 mph on the 
+x-axis and dist ranging from 0 to 120 ft on the y-axis. There is a moderate 
 positive linear relationship."}
 plot(cars)
 ```
@@ -683,7 +683,7 @@ class: middle
 
 ## Data Tactualization
 
-Data tactulization refers to making data visualization in a form so that it can be touchable by fingers. 
+Data tactulization refers to making data visualization in a form so that it can be touchable. 
 The video shows printing of a tactile boxplot.
 
 

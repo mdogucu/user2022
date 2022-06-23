@@ -259,7 +259,7 @@ Teaching Accessibility
 class: center
 
 
-&lt;img src="index_files/figure-html/unnamed-chunk-3-1.png" title="A timeline titled brief history of knitr. That points out that the initial commit was in October 2011, first download on CRAN was in October 2012, alt-text feature was requested in July 2020, feature was made available in January 2021" alt="A timeline titled brief history of knitr. That points out that the initial commit was in October 2011, first download on CRAN was in October 2012, alt-text feature was requested in July 2020, feature was made available in January 2021" style="display: block; margin: auto;" /&gt;
+&lt;img src="index_files/figure-html/unnamed-chunk-3-1.png" title="A timeline titled brief history of knitr. That points out that the initial commit was in October 2011, first download from CRAN was in October 2012, alt-text feature was requested in July 2020, feature was made available in January 2021" alt="A timeline titled brief history of knitr. That points out that the initial commit was in October 2011, first download from CRAN was in October 2012, alt-text feature was requested in July 2020, feature was made available in January 2021" style="display: block; margin: auto;" /&gt;
 
 
 
@@ -463,7 +463,7 @@ class: middle
 We can verbalize data via alternate text.
 
 &lt;div class="figure" style="text-align: center"&gt;
-&lt;img src="index_files/figure-html/unnamed-chunk-12-1.png" alt="The scatterplot shows speed ranging from about 0 to 25 on the x-axis and dist ranging from 0 to 120 on the y-axis. There is a moderate positive linear relationship."  /&gt;
+&lt;img src="index_files/figure-html/unnamed-chunk-12-1.png" alt="The scatterplot shows speed ranging from about 0 to 25 mph on the x-axis and dist ranging from 0 to 120 ft on the y-axis. There is a moderate positive linear relationship."  /&gt;
 &lt;p class="caption"&gt;The speed of cars (mph) and the distances (ft) taken to stop&lt;/p&gt;
 &lt;/div&gt;
 
@@ -473,8 +473,8 @@ class: middle
 
 ````markdown
 ```{r fig.cap="The speed of cars (mph) and the distances (ft) taken to stop", 
-fig.alt="The scatterplot shows speed ranging from about 0 to 25 on the 
-x-axis and dist ranging from 0 to 120 on the y-axis. There is a moderate 
+fig.alt="The scatterplot shows speed ranging from about 0 to 25 mph on the 
+x-axis and dist ranging from 0 to 120 ft on the y-axis. There is a moderate 
 positive linear relationship."}
 plot(cars)
 ```
@@ -604,7 +604,7 @@ class: middle
 
 ## Data Tactualization
 
-Data tactulization refers to making data visualization in a form so that it can be touchable by fingers. 
+Data tactulization refers to making data visualization in a form so that it can be touchable. 
 The video shows printing of a tactile boxplot.
 
 
@@ -798,19 +798,6 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
     deleted = true;
   });
 })();
-// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
-// screen reader (see PR #262)
-(function(d) {
-  let res = {};
-  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
-    const t = tr.querySelector('td:nth-child(2)').innerText;
-    tr.querySelectorAll('td:first-child .key').forEach(key => {
-      const k = key.innerText;
-      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
-    });
-  });
-  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
-})(document);
 (function() {
   "use strict"
   // Replace <script> tags in slides area to make them executable
